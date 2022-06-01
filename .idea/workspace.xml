@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="276ad25b-35cf-4a91-99cc-6d6a24f50a12" name="Default Changelist" comment="" />
+    <list default="true" id="276ad25b-35cf-4a91-99cc-6d6a24f50a12" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/bert_for_ner.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/bert_for_ner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/processors/ner_seq.py" beforeDir="false" afterPath="$PROJECT_DIR$/processors/ner_seq.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_ner_crf.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_ner_crf.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,8 +19,12 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="JupyterTrust" id="51156f4a-c721-4f2f-8baa-b8d615a6c565" />
   <component name="ProjectId" id="1rpViJ15hMq6UEwHMHzDE3Iinsm" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -24,7 +33,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SMHSA-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager" selected="Python.test (1)">
@@ -130,6 +139,20 @@
       <workItem from="1624175331094" duration="884000" />
       <workItem from="1624434481436" duration="11778000" />
       <workItem from="1624779980637" duration="12000" />
+      <workItem from="1625476813179" duration="37000" />
+      <workItem from="1625555308728" duration="253000" />
+      <workItem from="1625555916504" duration="856000" />
+      <workItem from="1625562088243" duration="376000" />
+      <workItem from="1625748872367" duration="519000" />
+      <workItem from="1625833014835" duration="227000" />
+      <workItem from="1626163307501" duration="2133000" />
+      <workItem from="1626348693671" duration="143000" />
+      <workItem from="1627528191064" duration="57000" />
+      <workItem from="1630983889284" duration="22000" />
+      <workItem from="1631535278691" duration="62000" />
+      <workItem from="1634036188224" duration="132000" />
+      <workItem from="1634042349943" duration="588000" />
+      <workItem from="1637930565384" duration="576000" />
     </task>
     <servers />
   </component>

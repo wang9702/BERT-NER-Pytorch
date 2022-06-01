@@ -5,10 +5,13 @@ import os
 import copy
 import json
 from .utils_ner import DataProcessor
+
 logger = logging.getLogger(__name__)
+
 
 class InputExample(object):
     """A single training/test example for token classification."""
+
     def __init__(self, guid, text_a, labels):
         """Constructs a InputExample.
         Args:
@@ -23,16 +26,20 @@ class InputExample(object):
 
     def __repr__(self):
         return str(self.to_json_string())
+
     def to_dict(self):
         """Serializes this instance to a Python dictionary."""
         output = copy.deepcopy(self.__dict__)
         return output
+
     def to_json_string(self):
         """Serializes this instance to a JSON string."""
         return json.dumps(self.to_dict(), indent=2, sort_keys=True) + "\n"
 
+
 class InputFeatures(object):
     """A single set of features of data."""
+
     def __init__(self, input_ids, input_mask, input_len, segment_ids, label_ids):
         self.input_ids = input_ids
         self.input_mask = input_mask
@@ -52,6 +59,7 @@ class InputFeatures(object):
         """Serializes this instance to a JSON string."""
         return json.dumps(self.to_dict(), indent=2, sort_keys=True) + "\n"
 
+
 def collate_fn(batch):
     """
     batch should be a list of (sequence, target, length) tuples...
@@ -65,10 +73,11 @@ def collate_fn(batch):
     all_labels = all_labels[:, :max_len]
     return all_input_ids, all_attention_mask, all_token_type_ids, all_labels, all_lens
 
+
 def convert_examples_to_features(examples, label_list, max_seq_length, tokenizer,
                                  cls_token_at_end=False, cls_token="[CLS]", cls_token_segment_id=1,
                                  sep_token="[SEP]", pad_on_left=False, pad_token=0, pad_token_segment_id=0,
-                                 sequence_a_segment_id=0, mask_padding_with_zero=True,):
+                                 sequence_a_segment_id=0, mask_padding_with_zero=True, ):
     """ Loads a data file into a list of `InputBatch`s
         `cls_token_at_end` define the location of the CLS token:
             - False (Default, BERT/XLM pattern): [CLS] + A + [SEP] + B + [SEP]
@@ -196,6 +205,7 @@ class CnerProcessor(DataProcessor):
             examples.append(InputExample(guid=guid, text_a=text_a, labels=labels))
         return examples
 
+
 class CluenerProcessor(DataProcessor):
     """Processor for the chinese ner data set."""
 
@@ -214,9 +224,9 @@ class CluenerProcessor(DataProcessor):
     def get_labels(self):
         """See base class."""
         return ["X", "B-address", "B-book", "B-company", 'B-game', 'B-government', 'B-movie', 'B-name',
-                'B-organization', 'B-position','B-scene',"I-address",
+                'B-organization', 'B-position', 'B-scene', "I-address",
                 "I-book", "I-company", 'I-game', 'I-government', 'I-movie', 'I-name',
-                'I-organization', 'I-position','I-scene',
+                'I-organization', 'I-position', 'I-scene',
                 "S-address", "S-book", "S-company", 'S-game', 'S-government', 'S-movie',
                 'S-name', 'S-organization', 'S-position',
                 'S-scene', 'O', "[START]", "[END]"]
@@ -232,7 +242,8 @@ class CluenerProcessor(DataProcessor):
             examples.append(InputExample(guid=guid, text_a=text_a, labels=labels))
         return examples
 
+
 ner_processors = {
     "cner": CnerProcessor,
-    'cluener':CluenerProcessor
+    'cluener': CluenerProcessor
 }
